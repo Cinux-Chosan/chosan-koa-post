@@ -1,0 +1,57 @@
+@import "bootstrap";
+.root {
+  $width: 250px;
+  width: $width;
+  left: 0;
+  height: 100%;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, .3);
+  background: #000;
+  transition: all .2s;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  &.hide {
+    left: -$width;
+  }
+}
+
+.indexBar{
+  // composes: d-flex align-items-center justify-content-center from global;
+  margin-top: 10px;
+  font-size: 26px;
+  height: 58px;
+  background-color: #fff;
+}
+
+.toggleSidebar {
+  $width: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: $width;
+  height: $width;
+  right: -$width/2;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #ccc;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  transition: all .2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0);
+  @include media-breakpoint-up(sm) {
+    &:hover {
+      transform: rotate(180deg) scale(1.5);
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    &:active {
+      transform: rotate(180deg) scale(1.5);
+    }
+  }
+}

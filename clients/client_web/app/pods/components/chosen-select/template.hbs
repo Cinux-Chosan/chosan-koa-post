@@ -1,0 +1,20 @@
+{{!-- <select name={{name}} local-class="zhubiStyle" id={{_subId}} multiple={{multiple}}>
+  {{#if hasPrompt}}
+    <option value="">{{prompt}}</option>
+  {{/if}}
+  {{#each options as |opt|}}
+    <option value={{or opt.val opt.key opt}} selected={{if (eq (or opt.val opt.key opt) value) 'selected'}}>{{or opt.key opt}}</option>
+  {{/each}}
+</select>
+ --}}
+
+{{#x-select name=name local-class="zhubiStyle" elementId=_subId multiple=multiple value=value as |xs|}}
+  {{#if hasPrompt}}
+    {{#xs.option value=""}}{{prompt}}{{/xs.option}}
+  {{/if}}
+  {{#each options as |opt|}}
+    {{#xs.option value=(or opt.val opt.key opt) selected=(if (eq (or opt.val opt.key opt) value) 'selected')}}
+      {{or opt.key opt}}
+    {{/xs.option}}
+  {{/each}}
+{{/x-select}}

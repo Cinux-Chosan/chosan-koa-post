@@ -1,0 +1,8 @@
+$height: 45px;
+.root{
+  height: $height;
+  background: blue;
+  color: #fff;
+  text-align: center;
+  line-height: $height;
+}

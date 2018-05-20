@@ -1,0 +1,41 @@
+@import "common";
+
+.root {
+  ul {
+    list-style-type: none;
+    user-select: none;
+    &.page-bar-list {
+      li {
+        border-radius: 2px;
+        float: left;
+        height: 25px;
+        text-align: center;
+        min-width: 24px;
+        border: 1px solid #dfe4e7;
+        cursor: pointer;
+        &:first-child {
+          @include icon('\e643');
+        }
+        &:last-child {
+          @include icon('\e642');
+        }
+        &.active {
+          background: #4285f6;
+          border-color: #4285f6;
+          &:hover {
+            background: #4285f6;
+            border-color: #4285f6;
+            opacity: .8;
+          }
+        }
+        &:hover {
+          background: #dfe4e7;
+          border-color: #dfe4e7;
+        }
+        &+li {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

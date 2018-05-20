@@ -1,0 +1,18 @@
+.opts{
+  top: 0;
+  right: 30px;
+  height: 60px;
+}
+
+.root{
+  img{
+    max-width: 100%;
+  }
+  :global(.markdown-body) {
+    ul, ol{
+      &:global(.linenums) {
+        padding-left: 3em;
+      }
+    }
+  }
+}

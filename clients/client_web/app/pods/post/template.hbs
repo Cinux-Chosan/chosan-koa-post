@@ -1,0 +1,13 @@
+
+{{#content-block title=model.title class="position-relative" local-class="root" remark=postRemark}}
+    {{#prettify-content class=(if (eq model.postType 'markdown') 'markdown-body')}}
+        {{{render-type model.content model.postType}}}
+    {{/prettify-content}}
+    <div class="position-absolute flex-all-center" local-class="opts">
+        {{#if loginService.isLoggedIn}}
+            {{#link-to "edit" model}}
+                <i class="iconfont icon-edit pointer"></i>
+            {{/link-to}}
+        {{/if}}
+    </div>
+{{/content-block}}

@@ -1,0 +1,29 @@
+<div id="app-main">
+    {{#common-sidebar isShow=withSidebar class="common-sidebar"}}
+        {{category-tree local-class="appCateTree" itemClicked=(action 'goToCategory')}}
+    {{/common-sidebar}}
+    <div local-class="appBody {{if withSidebar 'withSidebar'}}">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col col-12 px-0">
+                    {{liquid-outlet}}
+                </div>
+                <div class="col col-2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div local-class="mask {{if withSidebar 'withSidebar'}}" {{action "toggleSidebar" false}}></div>
+</div>
+
+{{#common-dialog isShowingModal=loginService.isShowingModal as |dialog|}}
+    {{dialog.head text="登陆"}}
+    {{#dialog.body}}
+        {{#common-form class="text-center mt-20px" as |f|}}
+            {{f.input label="用户名" value=loginService.userName}}
+            {{f.input label="密码" type="password" value=loginService.userPwd}}
+        {{/common-form}}
+    {{/dialog.body}}
+    {{dialog.foot onOk=(action 'onOk' target=loginService) onCancel=(action 'onCancel' target=loginService)}}
+{{/common-dialog}}

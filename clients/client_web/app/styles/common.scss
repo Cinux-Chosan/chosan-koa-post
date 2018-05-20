@@ -1,0 +1,98 @@
+@import "bootstrap";
+
+.w200 {
+  width: 200px;
+}
+
+.w250 {
+  width: 250px;
+}
+
+.h550{
+  height: 550px;
+}
+
+.h600{
+  height: 600px;
+}
+
+.minh600{
+  min-height: 600px !important;
+}
+
+.minh550{
+  min-height: 550px !important;
+}
+
+.color-white{
+  color: #fff;
+}
+
+.pt-20px{
+  padding-top: 20px;
+}
+
+.pb-20px{
+  padding-bottom: 20px;
+}
+
+.p-20px{
+  padding: 20px;
+}
+
+.m-20px{
+  margin: 20px;
+}
+
+.mt-20px{
+  margin-top: 20px;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.disabled{
+  user-select: none;
+  pointer-events: none;
+  background-color: #f9f9f9;
+}
+
+@mixin icon($uCode) {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:after{
+    content: $uCode
+  }
+}
+
+.flex-all-center{
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+}
+
+
+button.btn{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  & + & {
+    margin-left: 18px;
+  }
+  &.btn-default{
+    border: 1px solid  #eee;
+  }
+}
+
+
+.clear-left{
+  clear: left;
+}
+
+.clear-right{
+  clear: right;
+}

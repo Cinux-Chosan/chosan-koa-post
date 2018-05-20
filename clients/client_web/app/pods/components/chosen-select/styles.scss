@@ -1,0 +1,16 @@
+.root {
+  display: inline-block;
+  :global(.chosen-single),
+  :global(.chosen-with-drop .chosen-single),
+  :global(.chosen-drop),
+  :global(.chosen-search input[type=text]) {
+    border-color: #dfe4e7;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+  }
+
+  .zhubiStyle{
+    //
+  }
+}

@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+.appBody {
+  transition: all .2s;
+  @include media-breakpoint-up(sm) {
+    &.withSidebar {
+      margin-left: 250px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: #000;
+    transition: all .2s;
+    opacity: .6;
+    &.withSidebar{
+        width: 100%;
+    }
+  }
+}
+
+.appCateTree{
+  margin-top: 8px;
+  background: #fff;
+  padding: 20px 10px 20px 0;
+  // color: #fff;
+}

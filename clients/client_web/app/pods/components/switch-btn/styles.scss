@@ -1,0 +1,50 @@
+$font-size: 12px;
+$width: 6em;
+$height: 2em;
+.root {
+  overflow: hidden;
+  font-size: $font-size;
+  width: $width;
+  height: $height;
+  white-space: nowrap;
+  display: inline-block;
+  border-radius: 4px;
+  text-indent: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  span {
+    font-size: $font-size;
+    vertical-align: middle;
+    box-sizing: border-box;
+    display: inline-block;
+    width: $width / 2;
+    text-align: center;
+    background: #f5f5f5;
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    background-repeat: repeat-x;
+    text-indent: 0em;
+    height: $height;
+    line-height: $height;
+  }
+  span:first-child {
+    background-color: #005fcc;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #0044cc, #0088cc);
+  }
+  span:last-child {
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: linear-gradient(to bottom, #e6e6e6, #ffffff);
+  }
+}
+
+.btnContainer {
+  width: 100%;
+  transition: all .6s;
+  font-size: 0;  // 屏蔽掉空格导致的间隙
+}
+
+.close {
+  text-indent: - $width / 2;
+}

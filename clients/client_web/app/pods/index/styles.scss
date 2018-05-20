@@ -1,0 +1,14 @@
+.tip{
+      color: #ac6c6c;
+      font-size: 22px;
+      font-weight: 100;
+}
+.post-item{
+  line-height: 2;
+  font-size: 1.3em;
+  float: left;
+  clear: both;
+  &:hover, &:active{
+    text-decoration: none;
+  }
+}

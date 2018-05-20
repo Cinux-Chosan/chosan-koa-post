@@ -1,0 +1,9 @@
+@import "bootstrap";
+@import "./common";
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
+html, body {
+    height: 100%;
+    background-color: #f5f5d5 !important;
+}

@@ -1,0 +1,15 @@
+
+<ul class="float-right" local-class="page-bar-list">
+  <li class="{{if (eq page 1) 'disabled'}}" {{action "prev"}}></li>
+  {{#each items as |item|}}
+    {{#if (eq '...' item)}}
+      <li class="disabled" disabled="disabled">{{item}}</li>
+    {{else}}
+      <li local-class="{{if (eq page item) 'active'}}" {{action "itemClick" item}}>{{item}}</li>
+    {{/if}}
+  {{/each}}
+  <li class="{{if (eq page length) 'disabled'}}" {{action "next"}}></li>
+</ul>
+<div class="float-right">
+共 {{total}} 条数据, 每页显示条数 {{chosen-select options=chosenOptions value=limit hasPrompt=false}}
+</div>

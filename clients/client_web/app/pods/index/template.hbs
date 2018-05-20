@@ -1,0 +1,25 @@
+<div class="container-fluid">
+<div class="row">
+{{#content-block title="推荐文章" class="col-10 offset-1"}}
+  {{#if model.recomended}}
+  {{else}}
+    <div local-class="tip">sorry, 暂无推荐文章!!</div>
+  {{/if}}
+{{/content-block}}
+</div>
+<div class="row">
+{{#content-block title="文章列表" class="col-10 offset-1"}}
+  {{#if model.posts}}
+    <div class="clearfix">
+      {{#each model.posts as |post index|}}
+        {{#link-to "post" post.id local-class="post-item"}}
+          <span class="mr-3">{{add 1 index}}.</span> {{post.title}}
+        {{/link-to}}
+      {{/each}}
+    </div>
+  {{else}}
+    <div local-class="tip">sorry, 文章正在撰写中!!</div>
+  {{/if}}
+{{/content-block}}
+</div>
+</div>

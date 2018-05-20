@@ -1,0 +1,11 @@
+  <div class="clearfix flex-all-center" local-class="header">
+    <h1 class="text-center" local-class="title">{{title}}</h1>
+    <span local-class="remark">{{remark}}</span>
+  </div>
+  <div class="m-20px pb-20px">
+    {{#if hasBlock}}
+      {{yield}}
+    {{else}}
+      {{content}}
+    {{/if}}
+  </div>

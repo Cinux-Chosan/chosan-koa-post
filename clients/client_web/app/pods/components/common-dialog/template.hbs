@@ -1,0 +1,9 @@
+{{#if isShowingModal}}
+  {{#modal-dialog onClose="closeDialog" targetAttachment="center" translucentOverlay=true}}
+    {{yield (hash
+      head=(component 'components/common-dialog/head')
+      body=(component 'components/common-dialog/body')
+      foot=(component 'components/common-dialog/foot' isShowingModal=isShowingModal)
+    )}}
+  {{/modal-dialog}}
+{{/if}}

@@ -1,0 +1,31 @@
+.root{
+  line-height: 2em;
+}
+
+.operations {
+  list-style-type: none;
+  i{
+    cursor: pointer;
+    &:hover{
+      color: #007bff;
+    }
+  }
+}
+
+.edit {
+  @include icon('\e6d6');
+}
+
+.del {
+  @include icon('\e66e');
+}
+
+.add {
+  @include icon('\e627');
+}
+
+.noPermission{
+  .edit, .del, .add {
+    display: none;
+  }
+}

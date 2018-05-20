@@ -1,0 +1,22 @@
+
+{{#if hasPermission}}
+<div class="clearfix" local-class="options">
+  <button class="btn btn-primary float-right" {{action "addTopNode"}}>
+    添加新顶级节点
+  </button>
+</div>
+{{/if}}
+
+{{#each categories as |root|}}
+  {{tree-view model=root hasPermission=hasPermission edit=(action "edit") itemClicked=(action "itemClicked")}}
+{{/each}}
+
+{{#common-dialog isShowingModal=isShowingModal as |dialog|}}
+  {{dialog.head text="编辑分类"}}
+  {{#dialog.body}}
+    {{#common-form local-class="dialog-form" as |f|}}
+      {{f.input label="分类名" value=tmpNode.name autofocus=true}}
+    {{/common-form}}
+  {{/dialog.body}}
+  {{dialog.foot onOk=(action 'modalOk') onCancel=(action 'modalCancel')}}
+{{/common-dialog}}
