@@ -4,7 +4,8 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "start": "pm2 start process.prod.json --no-daemon",
+        "start": "node ./app.js",
+        "pmstart": "pm2 start process.prod.json --no-daemon",
         "dev": "nodemon --config nodemon.json app.js",
         "initdb": "npm install && node tools/initdb.js"
     },
@@ -23,7 +24,8 @@
         "mkdir-p": "0.0.7",
         "mysql": "^2.14.1",
         "pify": "^2.3.0",
-        "wafer-node-sdk": "^1.0.7"
+        "wafer-node-sdk": "^1.0.7",
+        "mongodb": "^3.0.1"
     },
     "devDependencies": {
         "babel-eslint": "^7.1.0",

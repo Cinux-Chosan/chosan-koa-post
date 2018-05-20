@@ -42,5 +42,20 @@ function formatResponseData(data, meta = {}) {
 // 默认导出指定文件夹下的映射
 module.exports = { 
     mapDir,
-    fmtRes: formatResponseData
+    fmtRes: formatResponseData,
+    formatResponseData
 }
+
+
+function mkJSONAPI(data) {
+    let { _id, type, meta } = data;
+    delete data._id;
+    delete data.type;
+    delete data.meta;
+    return {
+      attributes: data,
+      _id,
+      type,
+      meta
+    }
+  }

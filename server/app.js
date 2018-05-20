@@ -11,7 +11,7 @@ const app = new Koa()
 app.use(require('koa-static')(path.join(__dirname, 'clients/client_web/dist')));
 
 // 使用响应处理中间件
-app.use(response)
+// app.use(response)
 
 // 解析请求体
 app.use(bodyParser())
